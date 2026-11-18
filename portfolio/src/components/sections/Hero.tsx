@@ -25,7 +25,7 @@ export default function Hero() {
   const L = me.links;
   const ghost = "btn border border-white/15 bg-white/5 hover:bg-white/10";
   return (
-    <header className="relative flex min-h-screen items-center overflow-hidden">
+    <header className="relative flex min-h-screen flex-col justify-center overflow-hidden pb-8">
       <div aria-hidden className="absolute inset-0">
         <div className="blob left-[-10%] top-[10%] h-[480px] w-[480px] bg-violet-600" />
         <div className="blob right-[-5%] top-[30%] h-[420px] w-[420px] bg-cyan-500" style={{ animationDelay: "-6s" }} />
@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
         <div className="relative h-[360px] md:h-[560px]"><Orb /></div>
       </div>
-      <div className="absolute bottom-6 left-0 right-0 z-10 mx-auto grid max-w-6xl grid-cols-2 gap-4 px-6 md:grid-cols-4">
+      <div className="relative z-10 mx-auto mt-10 grid w-full max-w-6xl grid-cols-2 gap-4 px-6 md:grid-cols-4">
         {me.stats.map((s) => <div key={s.label} className="glass px-5 py-4"><div className="text-3xl font-semibold"><Count to={s.to} dec={s.dec} suffix={s.suffix} /></div><div className="text-sm text-white/55">{s.label}</div></div>)}
       </div>
     </header>
